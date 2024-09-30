@@ -87,7 +87,7 @@ public class Items_StepDef {
 
     @Then("user should be able to see that the new item is listed in the items table")
     public void user_should_be_able_to_see_that_the_new_item_is_listed_in_the_items_table() {
-
+        Assert.assertTrue(itemsPage.newItem.isDisplayed());
     }
 
 }
