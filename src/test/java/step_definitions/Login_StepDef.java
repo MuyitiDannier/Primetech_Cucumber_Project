@@ -1,5 +1,6 @@
 package step_definitions;
 
+import Utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,11 +13,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Login_StepDef {
 
-    WebDriver driver;
+    WebDriver driver = Driver.getDriver();
 
     @Given("User is navigated to saucedemo.com")
     public void user_is_navigated_to_saucedemo_com() {
-        driver = new ChromeDriver();
         driver.get("http://www.saucedemo.com");
     }
     @When("User enters {string} in the username field")

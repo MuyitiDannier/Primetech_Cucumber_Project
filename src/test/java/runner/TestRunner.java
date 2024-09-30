@@ -5,13 +5,14 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)//Telling Junit to run the TestRunner Class as a cucumber test.
-@CucumberOptions(features = "src/test/resources/features/login.feature",
-                 glue = "step_definitions",
-                 plugin = {"pretty", "html:target/primetech-report.html"}
+@CucumberOptions(features = "src/test/resources/features/Items.feature",
+                 glue = {"step_definitions", "Hooks"},//For Hooks, just need to provide the package name for the path.
+                 plugin = {"pretty", "html:target/primetech-report.html"},
+                 tags ="not @NegativeTest",//"@Crater and @smoke" will specify more to the test scenario.
+                 monochrome = true
                  )
 
 public class TestRunner {
     //This class will allow us to execute and run our feature files/step definitions.
-
-
 }
+
