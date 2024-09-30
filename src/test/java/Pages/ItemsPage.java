@@ -18,5 +18,3 @@ public class ItemsPage {
     public WebElement newItem;
 
 }
-
-

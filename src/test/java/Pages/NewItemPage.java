@@ -30,5 +30,3 @@ public class NewItemPage {
     public WebElement saveItemButton;
 
 }
-
-
