@@ -1,8 +1,5 @@
 package step_definitions;
-import Pages.INV000023Page;
-import Pages.InvoicesPage;
-import Pages.LoginPage;
-import Pages.SettingsPage;
+import Pages.*;
 import Utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
@@ -19,9 +16,10 @@ public class Invoices_StepDef {
     SettingsPage settingsPage = new SettingsPage();
     InvoicesPage invoicesPage = new InvoicesPage();
     INV000023Page inv000023Page = new INV000023Page();
+    NewInvoicePage newInvoicePage = new NewInvoicePage();
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-
+    //Scenario_1
     @When("user clicks on Invoices")
     public void user_clicks_on_invoices() {
         settingsPage.invoicesButton.click();
@@ -67,9 +65,48 @@ public class Invoices_StepDef {
         invoicesPage.adilaInv000023.click();
         wait.until(ExpectedConditions.visibilityOf(inv000023Page.adilaInv000023Label));
     }
+
     @Then("user should see that the invoice details are displayed on the right side of the screen")
     public void user_should_see_that_the_invoice_details_are_displayed_on_the_right_side_of_the_screen() {
         inv000023Page.adilaInv000023Label.isDisplayed();
+    }
+
+    //Scenario_2
+    @When("user clicks on + New Invoice button")
+    public void user_clicks_on_new_invoice_button() {
+        invoicesPage.newInvoiceButton.click();
+        wait.until(ExpectedConditions.visibilityOf(newInvoicePage.newInvoiceLabel));
+    }
+    @Then("user should be directed to the New Invoice page")
+    public void user_should_be_directed_to_the_new_invoice_page() {
+        newInvoicePage.newInvoiceLabel.isDisplayed();
+    }
+    @When("user selects a specific client New Customer dropdown")
+    public void user_selects_a_specific_client_new_customer_dropdown() {
+
+    }
+    @When("user selects a specific item from Item dropdown")
+    public void user_selects_a_specific_item_from_item_dropdown() {
+
+    }
+    @When("user enters {string} in the Quantity field")
+    public void user_enters_in_the_quantity_field(String string) {
+
+    }
+    @When("user enters {string} in the Price field")
+    public void user_enters_in_the_price_field(String string) {
+
+    }
+    @When("user clicks on the Save Invoice button")
+    public void user_clicks_on_the_save_invoice_button() {
+
+    }
+    @Then("user should see the new invoice is listed in the invoices list")
+    public void user_should_see_the_new_invoice_is_listed_in_the_invoices_list() {
+
+    }
+    @Then("the invoice total should match the added items and their quantities")
+    public void the_invoice_total_should_match_the_added_items_and_their_quantities() {
 
     }
 }

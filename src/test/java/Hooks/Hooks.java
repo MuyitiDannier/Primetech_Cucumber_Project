@@ -13,7 +13,7 @@ public class Hooks {
     public void beforeScenario(){
         Driver.getDriver().manage().window().maximize();
         System.out.println("Run before each scenario.");
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @After

@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features/Invoices.feature",
                  glue = {"step_definitions", "Hooks"},//For Hooks, just need to provide the package name for the path.
                  plugin = {"pretty", "html:target/primetech-report.html"},
-                 tags ="not @NegativeTest"//"@Crater and @smoke" will specify more to the test scenario.
+                 tags ="@AddNewInvoices"//"@Crater and @smoke" will specify more to the test scenario.
                  //monochrome = true
                  )
 

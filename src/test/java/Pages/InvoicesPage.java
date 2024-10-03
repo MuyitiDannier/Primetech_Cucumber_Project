@@ -25,5 +25,8 @@ public class InvoicesPage {
 
     @FindBy(xpath = "//a[@class='relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-l-md hover:bg-gray-50']")
     public WebElement previousPageButton;
+
+    @FindBy(xpath = "//button[@class='inline-flex whitespace-nowrap items-center border font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 px-4 py-2 text-sm leading-5 rounded-md border-transparent shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:ring-primary-500 ml-4']")
+    public WebElement newInvoiceButton;
 }
 
