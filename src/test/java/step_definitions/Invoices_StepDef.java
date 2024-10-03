@@ -70,5 +70,6 @@ public class Invoices_StepDef {
     @Then("user should see that the invoice details are displayed on the right side of the screen")
     public void user_should_see_that_the_invoice_details_are_displayed_on_the_right_side_of_the_screen() {
         inv000023Page.adilaInv000023Label.isDisplayed();
+
     }
 }
