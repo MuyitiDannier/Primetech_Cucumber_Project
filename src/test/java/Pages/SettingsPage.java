@@ -18,4 +18,7 @@ public class SettingsPage {
 
     @FindBy(xpath = "//a[@href='/admin/items']")
     public WebElement itemsButton;
+
+    @FindBy(xpath = "//a[@href='/admin/invoices']")
+    public WebElement invoicesButton;
 }

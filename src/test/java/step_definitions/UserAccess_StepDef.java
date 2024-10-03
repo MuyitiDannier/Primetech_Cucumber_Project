@@ -77,7 +77,6 @@ public class UserAccess_StepDef {
         String loginUrl = "http://crater.primetech-apps.com/login";
         //verify that login url didn't changes , meaning we are still in the same page and we couldn't login
         Assert.assertTrue(driver.getCurrentUrl().equals(loginUrl));
-        Driver.closeDriver();//close the driver
     }
 
 }
