@@ -1,3 +1,4 @@
+@Invoices
 Feature: Invoices Feature
   As a user, I want to access and manage the invoices page.
 

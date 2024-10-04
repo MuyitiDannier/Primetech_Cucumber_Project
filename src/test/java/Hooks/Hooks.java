@@ -9,7 +9,7 @@ import java.time.Duration;
 
 public class Hooks {
 
-    @Before
+    @Before()//()Parameters can be changed according to different conditions. Ex: (order = 1), ("@smoke").
     public void beforeScenario(){
         Driver.getDriver().manage().window().maximize();
         System.out.println("Run before each scenario.");
@@ -23,7 +23,7 @@ public class Hooks {
             scenario.attach(screenshot , "image/png", scenario.getName());
         }
         Thread.sleep(3000);
-        Driver.getDriver().close();
+        Driver.getDriver().quit();
     }
 
     @BeforeStep
