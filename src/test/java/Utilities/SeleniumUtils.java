@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class SeleniumUtils {
 
@@ -69,6 +70,15 @@ public class SeleniumUtils {
     public static void sendkeysWithActionsClass(WebElement element, String input) {
         Actions actions = new Actions(Driver.getDriver());
         actions.sendKeys(element, input).build().perform();
+    }
+
+    public static boolean isItemInTable(List<WebElement> elementList, String itemNameToSearchFor){
+        for(WebElement item : elementList){
+            if(item.getText().equals(itemNameToSearchFor)){
+                return true;
+            }
+        }
+        return  false;
     }
 }
 

@@ -20,7 +20,7 @@ public class NewItemPage {
     @FindBy(xpath = "//input[@class='font-base block w-full sm:text-sm border-gray-200 rounded-md text-black focus:ring-primary-400 focus:border-primary-400 v-money3']")
     public WebElement priceField;
 
-    @FindBy(xpath = "//div[@class='p-0 relative mx-auto w-full flex items-center justify-end box-border cursor-pointer border border-gray-200 rounded-md bg-white text-sm leading-snug outline-none max-h-10']")
+    @FindBy(xpath = "//div[@tabindex='-1']/input")
     public WebElement unitList;//Need to figure out which xpath is correct and how to click on List element.
 
     @FindBy(xpath = "//textarea[@name='description' and @class='box-border w-full px-3 py-2 text-sm not-italic font-normal leading-snug text-left text-black placeholder-gray-400 bg-white border border-gray-200 border-solid rounded outline-none focus:ring-primary-400 focus:border-primary-400']")

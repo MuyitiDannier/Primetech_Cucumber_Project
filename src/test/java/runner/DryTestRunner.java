@@ -5,7 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)//Telling Junit to run the TestRunner Class as a cucumber test.
-@CucumberOptions(features = "src/test/resources/features/Login_Outline.feature",
+@CucumberOptions(features = "src/test/resources/features/Items.feature",
                  glue = "step_definitions",
                  plugin = {"pretty", "html:target/primetech-report.html"},
                  dryRun = true //dryRun=true allows all codes to be executed and highlights the ones with problems

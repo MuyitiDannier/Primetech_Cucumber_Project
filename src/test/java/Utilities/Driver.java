@@ -22,8 +22,6 @@ public class Driver {
     public static WebDriver getDriver(){
         if(driver == null){
             driver = new ChromeDriver();
-        }else if (((RemoteWebDriver) driver).getSessionId() == null) {
-            driver = new ChromeDriver(); // Reinitialize if the session is closed
         }
         return driver;
     }

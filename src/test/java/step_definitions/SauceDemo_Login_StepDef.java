@@ -9,9 +9,8 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Login_StepDef {
+public class SauceDemo_Login_StepDef {
 
     WebDriver driver = Driver.getDriver();
 

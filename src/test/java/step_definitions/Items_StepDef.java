@@ -62,16 +62,16 @@ public class Items_StepDef {
 
     @When("user enters {string} into the Name field")
     public void user_enters_into_the_name_field(String string) {
-        SeleniumUtils.sendkeysWithActionsClass(newItemPage.nameField, "New Item");
+        SeleniumUtils.sendkeysWithActionsClass(newItemPage.nameField, "New Item Dan");
 
     }
-    @And("user enters {string} into the Price field")
-    public void user_enters_into_the_price_field(String string) {
-        SeleniumUtils.sendkeysWithActionsClass(newItemPage.priceField, "$12.99");
+    @And("user enters price {string} into the Price field")
+    public void user_enters_into_the_price_field(String price) {
+        SeleniumUtils.sendkeysWithActionsClass(newItemPage.priceField, price);
     }
-    @And("user selects {string} in the Unit List")
-    public void user_selects_in_the_unit_list(String string) {
-        //Codes Needed.
+    @And("user chooses item unit {string} in the Unit List")
+    public void user_chooses_in_the_unit_list(String itemUnit) {
+        newItemPage.unitList.sendKeys(itemUnit);
     }
 
     @And("user enter {string} into the Description field")
@@ -86,8 +86,10 @@ public class Items_StepDef {
     }
 
     @Then("user should be able to see that the new item is listed in the items table")
-    public void user_should_be_able_to_see_that_the_new_item_is_listed_in_the_items_table() {
-        Assert.assertTrue(itemsPage.newItem.isDisplayed());
+    public void user_should_be_able_to_see_that_the_new_item_is_listed_in_the_items_table() throws InterruptedException {
+        Thread.sleep(3000);
+        String itemName = "New Item Dan";
+        Assert.assertTrue(SeleniumUtils.isItemInTable(itemsPage.itemsList, itemName));
     }
 
 }

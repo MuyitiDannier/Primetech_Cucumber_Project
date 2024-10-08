@@ -23,7 +23,7 @@ public class Hooks {
             scenario.attach(screenshot , "image/png", scenario.getName());
         }
         Thread.sleep(3000);
-        Driver.getDriver().quit();
+        Driver.closeDriver();
     }
 
     @BeforeStep

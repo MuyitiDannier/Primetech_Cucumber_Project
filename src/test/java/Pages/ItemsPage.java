@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class ItemsPage {
     //Constructor
     public ItemsPage(){
@@ -16,5 +18,8 @@ public class ItemsPage {
 
     @FindBy(xpath = "//a[text()='New Item']")
     public WebElement newItem;
+
+    @FindBy(xpath = "//a[contains(@href, '/admin/items/')]")
+    public List<WebElement> itemsList;
 
 }

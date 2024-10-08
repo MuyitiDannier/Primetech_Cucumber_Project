@@ -9,7 +9,6 @@ Feature: Login to Sauce Demo
     And user clicks on login button
     Then user should be logged in successfully
 
-  @Scenario_Outline
   # To make a scenario outline, we need to follow three rules:
   # 1: We need to use scenario outline instead of scenario
   # 2: We need to parameterize the fields that will have different values

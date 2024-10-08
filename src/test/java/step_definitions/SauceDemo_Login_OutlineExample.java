@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Login_OutlineExample {
+public class SauceDemo_Login_OutlineExample {
 
     WebDriver driver = Driver.getDriver();
 
