@@ -90,6 +90,7 @@ public class Items_StepDef {
         Thread.sleep(3000);
         String itemName = "New Item Dan";
         Assert.assertTrue(SeleniumUtils.isItemInTable(itemsPage.itemsList, itemName));
+
     }
 
 }
